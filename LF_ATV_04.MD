@@ -1,16 +1,15 @@
 ## 1-
 
-# A) ((aa+ab+ba+bb))*(a+b)
-# B) ((a+b)(a+b)(a+b)(a+b))*
-# C) b*(ab*ab*)*
-# D) a*ba*(a*ba*ba*)*
+A) ((aa+ab+ba+bb))*(a+b)
+B) ((a+b)(a+b)(a+b)(a+b))*
+C) b*(ab*ab*)*
+D) a*ba*(a*ba*ba*)*
 
 ## 2-
-
-# Resposta Correta: d. (b*ab*ab*)* 
+Resposta Correta: d. (b*ab*ab*)* 
 
 ## 3-
-# a. Somente as igualdades I e II são verdadeiras.
+a. Somente as igualdades I e II são verdadeiras.
 
 ## 4- 
 A Gramática Regular G = (V, T, P, S) é definida como:
