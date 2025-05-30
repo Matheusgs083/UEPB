@@ -31,3 +31,67 @@ P (Produções):
 12. `q5 → a q1`
 13. `q5 → b q5`
 14. `q5 → ε` (pois q5 é um estado de aceitação)
+
+## 5- 
+-
+digraph AFN_E {
+	rankdir=LR
+	node [shape=circle]
+	S0
+	S1 [shape=doublecircle]
+	S2
+	S3
+	S4
+	S5
+	S6
+	start [shape=point]
+	start -> S0
+	S0 -> S1 [label=a]
+	S1 -> S2 [label=c]
+	S2 -> S3 [label=a]
+	S3 -> S1 [label="ε"]
+	S1 -> S4 [label=d]
+	S4 -> S5 [label=e]
+	S5 -> S6 [label=f]
+	S6 -> S1 [label="ε"]
+}
+
+-digraph AFD {
+	rankdir=LR
+	node [shape=circle]
+	A [label="{S0}" shape=circle]
+	B [label="{S1}" shape=doublecircle]
+	C [label="{S2}" shape=circle]
+	D [label="{S4}" shape=circle]
+	E [label="{S1,S3}" shape=doublecircle]
+	F [label="{S5}" shape=circle]
+	G [label="{S1,S6}" shape=doublecircle]
+	start [shape=point]
+	start -> A
+	A -> B [label=a]
+	B -> C [label=c]
+	B -> D [label=d]
+	C -> E [label=a]
+	D -> F [label=e]
+	E -> C [label=c]
+	E -> D [label=d]
+	F -> G [label=f]
+	G -> C [label=c]
+	G -> D [label=d]
+}
+-
+* A → aB
+* B → cC
+* B → dD
+* B → ε (porque B é um estado final: {S1})
+* C → aE
+* D → eF
+* E → cC
+* E → dD
+* E → ε (porque E é um estado final: {S1,S3})
+* F → fG
+* G → cC
+* G → dD
+* G → ε (porque G é um estado final: {S1,S6})
+
+
